@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Correlación de Pearson</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../scripts/correlation.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1><a href="../index.html">Calculadoras Estadísticas</a></h1>
+    <p class="subtitulo">Correlación de Pearson (r)</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Ingresar datos</h2>
+      <p>Introduce listas de números separadas por comas. Deben tener la misma longitud.</p>
+      
+      <div class="form-group">
+        <label for="xInput"><strong>X:</strong></label>
+        <textarea id="xInput" rows="4" placeholder="Ejemplo: 10, 12, 13, 15, 18"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="yInput"><strong>Y:</strong></label>
+        <textarea id="yInput" rows="4" placeholder="Ejemplo: 8,  9,  11, 14, 16"></textarea>
+      </div>
+
+      <div id="error-box" class="error-message" style="display: none;"></div>
+
+      <button id="calcular">Calcular correlación</button>
+    </section>
+
+    <section id="resultados">
+      <h2>Resultados</h2>
+      <pre id="salida"></pre>
+      <div id="tablaResumen"></div>
+
+      <h3>Gráfico</h3>
+      <p id="notaGrafico" style="margin:0;"></p>
+      <canvas id="graficoScatter"></canvas>
+    </section>
+
+    <a href="../index.html" class="enlace-volver">← Volver al menú</a>
+  </main>
+
+  <footer>
+    <small>IPN · UPIIT · Minería de Datos</small>
+  </footer>
+
+</body>
+</html>

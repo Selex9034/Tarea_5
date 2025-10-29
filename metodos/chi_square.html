@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi-cuadrado de independencia</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../scripts/chi_square.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1><a href="../index.html">Calculadoras Estadísticas</a></h1>
+    <p class="subtitulo">Chi-cuadrado de independencia (χ²)</p>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Configuración de tabla</h2>
+      <div class="form-group" style="display: flex; gap: 20px;">
+        <label>Filas: <input type="number" id="nFilas" min="2" value="2" style="width: 80px;"></label>
+        <label>Columnas: <input type="number" id="nCols" min="2" value="2" style="width: 80px;"></label>
+      </div>
+      <button id="generar" style="width: auto;">Generar tabla</button>
+    </section>
+
+    <section id="tabla-observada">
+      <h2>Frecuencias observadas</h2>
+      <div id="contenedor-tabla"></div>
+    </section>
+
+    <div id="error-box" class="error-message" style="display: none;"></div>
+    
+    <button id="calcular">Calcular χ²</button>
+
+    <section id="resultados">
+      <h2>Resultados</h2>
+      <pre id="salida"></pre>
+      <div id="tabla-esperada"></div>
+      <canvas id="graficoChi"></canvas>
+    </section>
+
+    <a href="../index.html" class="enlace-volver">← Volver al menú</a>
+  </main>
+  
+  <footer>
+    <small>IPN · UPIIT · Minería de Datos</small>
+  </footer>
+
+</body>
+</html>

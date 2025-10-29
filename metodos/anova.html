@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANOVA de un factor</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../scripts/anova.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+
+  <header>
+    <h1><a href="../index.html">Calculadoras Estadísticas</a></h1>
+    <p class="subtitulo">ANOVA de un factor</p>
+  </header>
+
+  <main class="container">
+    <section id="control-grupos">
+    <h2>Controles</h2>
+    <div class="button-group">
+      <button id="agregar">➕ Agregar grupo</button>
+      <button id="eliminar">➖ Eliminar último grupo</button>
+    </div>
+  </section>
+
+    <section id="grupos">
+      <h2>Datos por grupo</h2>
+      <p>Introduce listas de números separadas por comas.</p>
+      </section>
+
+    <div id="error-box" class="error-message" style="display: none;"></div>
+    
+    <button id="calcular">Calcular ANOVA</button>
+
+    <section id="resultados">
+      <h2>Resultados</h2>
+      <pre id="salida"></pre>
+      <div id="tabla-anova"></div>
+
+      <div id="graficos">
+        <canvas id="graficoMedias"></canvas>
+        <canvas id="graficoDispersion"></canvas>
+      </div>
+    </section>
+
+    <a href="../index.html" class="enlace-volver">← Volver al menú</a>
+  </main>
+  
+  <footer>
+    <small>IPN · UPIIT · Minería de Datos</small>
+  </footer>
+
+</body>
+</html>
