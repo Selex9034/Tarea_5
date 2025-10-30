@@ -10,6 +10,46 @@
   --color-borde: #ddd;
   --radio-borde: 8px;
   --sombra-caja: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  /* --- NUEVAS VARIABLES DE COLOR PARA TARJETAS --- */
+  --color-card-anova: #6698CC;    /* Fondo muy claro azul */
+  --color-card-chi: #b4b534;      /* Fondo muy claro verde */
+  --color-card-pca: #F08C21;      /* Fondo muy claro naranja */
+  --color-card-pearson: #E36888;  /* Fondo muy claro rojo */
+
+  --borde-anova: #bbdefb;
+  --borde-chi: #c8e6c9;
+  --borde-pca: #ffecb3;
+  --borde-pearson: #ffcdd2;
+
+  --titulo-anova: #faf0ca;      
+  --titulo-chi: #faf0ca;        
+  --titulo-pca: #faf0ca;        
+  --titulo-pearson: #faf0ca;
+
+  /* Variables específicas de ANOVA para el tema */
+  --anova-main: #6698CC;         /* Tu color base */
+  --anova-dark: #376E9F;         /* Tono oscuro para hover/botones fuertes */
+  --anova-text: #173650;         /* Tono muy oscuro para encabezados */
+  --anova-light: #d1e2fc;
+
+  /* Variables específicas de CHI-CUADRADO (Verde/Lima) */
+  --chi-main: #b4b534;           /* Color base */
+  --chi-dark: #8c8d23;           /* Tono oscuro para hover/botones fuertes */
+  --chi-text: #4d4e13;           /* Tono muy oscuro para encabezados */
+  --chi-light: #f9ffc3;          /* Tono muy claro para fondos */
+
+  /* Variables específicas de PCA (Naranja) */
+  --pca-main: #F08C21;           /* Color base */
+  --pca-dark: #C9721C;           /* Tono oscuro para hover/botones fuertes */
+  --pca-text: #7A4610;           /* Tono muy oscuro para encabezados */
+  --pca-light: #ffd79c;          /* Tono muy claro para fondos */
+
+  /* Variables específicas de PEARSON (Rosa) */
+  --pearson-main: #E36888;       /* Color base */
+  --pearson-dark: #C95674;       /* Tono oscuro para hover/botones fuertes */
+  --pearson-text: #8C2C45;       /* Tono muy oscuro para encabezados */
+  --pearson-light: #fcc5d0;      /* Tono muy claro para fondos */
 }
 
 body {
@@ -85,15 +125,51 @@ footer {
   gap: 20px;
 }
 .card {
-  background: var(--color-superficie);
-  border: 1px solid var(--color-borde);
+  /* Eliminamos el background, el borde y el box-shadow de aquí para definirlos por tarjeta */
+  background: var(--color-superficie); /* Base blanca, lo vamos a sobrescribir */
+  border: 1px solid var(--color-borde); /* Borde gris, lo vamos a sobrescribir */
   border-radius: var(--radio-borde);
   padding: 20px;
   box-shadow: var(--sombra-caja);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  flex-basis: 300px; /* <-- Añadido (le da un ancho base de 300px) */
-  flex-grow: 0;   /* <-- Añadido (evita que la última tarjeta se estire) */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Transición para el color */
+  flex-basis: 300px;
+  flex-grow: 0;
 }
+
+.card-anova {
+  background-color: var(--color-card-anova);
+  border: 1px solid var(--borde-anova);
+}
+.card-anova h2 {
+  color: var(--titulo-anova);
+}
+
+.card-chi {
+  background-color: var(--color-card-chi);
+  border: 1px solid var(--borde-chi);
+}
+.card-chi h2 {
+  color: var(--titulo-chi);
+}
+
+.card-pca {
+  background-color: var(--color-card-pca);
+  border: 1px solid var(--borde-pca);
+}
+.card-pca h2 {
+  color: var(--titulo-pca); 
+}
+
+.card-pearson {
+  background-color: var(--color-card-pearson);
+  border: 1px solid var(--borde-pearson);
+}
+.card-pearson h2 {
+  color: var(--titulo-pearson); 
+}
+
+
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -101,11 +177,145 @@ footer {
 }
 .card h2 {
   margin-top: 0;
-  color: var(--color-primario);
 }
 .card p {
   color: #444;
 }
+
+/* === TEMA PARA PÁGINA ANOVA === */
+
+body.theme-anova {
+    background: var(--anova-light);
+  
+    /* 1. Encabezados y enlaces primarios */
+    h1, h2, h3 {
+        color: var(--anova-text); /* Azul muy oscuro para títulos */
+    }
+    a {
+        color: var(--anova-dark); /* Enlaces en tono oscuro de azul */
+    }
+    a:hover {
+        color: var(--anova-main);
+    }
+
+    /* 2. Botones de acción (el botón de Calcular) */
+    button {
+        background: var(--anova-main);
+        transition: background-color 0.2s ease;
+    }
+    button:hover {
+        background: var(--anova-dark);
+    }
+    
+    /* 3. Títulos principales del header */
+    header h1 a {
+        color: var(--anova-text);
+    }
+    header h1 a:hover {
+        color: var(--anova-main);
+    }
+
+    /* 4. Tablas (resultados) */
+    thead th {
+        background-color: var(--anova-light); /* Fondo muy claro para encabezados de tabla */
+        color: var(--anova-text);            /* Texto muy oscuro */
+    }
+    tbody tr:hover {
+        background-color: var(--anova-light);
+    }
+
+    section {
+        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
+        border: 1px solid var(--borde-anova); /* Borde azul claro */
+    }
+
+    /* 5. Botón de 'Eliminar' (ajuste el rojo a un rojo de verdad, no monocromático) */
+    #eliminar {
+        background-color: #c62828 !important; /* Mantenemos el color de error rojo para la acción de eliminar */
+    }
+    #eliminar:hover {
+        background-color: #b71c1c !important; 
+    }
+}
+
+/* === TEMA MONOCROMÁTICO PARA CHI-CUADRADO (Verde/Lima) === */
+body.theme-chi {
+    background: var(--chi-light); /* Fondo verde muy claro para toda la página */
+    
+    h1, h2, h3 { color: var(--chi-text); }
+    a { color: var(--chi-dark); }
+    a:hover { color: var(--chi-main); }
+
+    button { background: var(--chi-main); }
+    button:hover { background: var(--chi-dark); }
+    
+    header h1 a { color: var(--chi-text); }
+    header h1 a:hover { color: var(--chi-main); }
+
+    thead th { background-color: var(--chi-light); color: var(--chi-text); }
+    tbody tr:hover { background-color: var(--chi-light); }
+    
+    section {
+        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
+        border: 1px solid var(--borde-chi); /* Borde verde claro */
+    }
+
+    #eliminar { background-color: #c62828 !important; }
+    #eliminar:hover { background-color: #b71c1c !important; }
+}
+
+/* === TEMA MONOCROMÁTICO PARA PCA (Naranja) === */
+body.theme-pca {
+    background: var(--pca-light); /* Fondo naranja muy claro para toda la página */
+    
+    h1, h2, h3 { color: var(--pca-text); }
+    a { color: var(--pca-dark); }
+    a:hover { color: var(--pca-main); }
+
+    button { background: var(--pca-main); }
+    button:hover { background: var(--pca-dark); }
+    
+    header h1 a { color: var(--pca-text); }
+    header h1 a:hover { color: var(--pca-main); }
+
+    thead th { background-color: var(--pca-light); color: var(--pca-text); }
+    tbody tr:hover { background-color: var(--pca-light); }
+    
+    section {
+        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
+        border: 1px solid var(--borde-pca); /* Borde naranja claro */
+    }
+
+    #eliminar { background-color: #c62828 !important; }
+    #eliminar:hover { background-color: #b71c1c !important; }
+}
+
+/* === TEMA MONOCROMÁTICO PARA PEARSON (Rosa) === */
+body.theme-pearson {
+    background: var(--pearson-light); /* Fondo rosa muy claro para toda la página */
+    
+    h1, h2, h3 { color: var(--pearson-text); }
+    a { color: var(--pearson-dark); }
+    a:hover { color: var(--pearson-main); }
+
+    button { background: var(--pearson-main); }
+    button:hover { background: var(--pearson-dark); }
+    
+    header h1 a { color: var(--pearson-text); }
+    header h1 a:hover { color: var(--pearson-main); }
+
+    thead th { background-color: var(--pearson-light); color: var(--pearson-text); }
+    tbody tr:hover { background-color: var(--pearson-light); }
+    
+    section {
+        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
+        border: 1px solid var(--borde-pearson); /* Borde rosa claro */
+    }
+
+    #eliminar { background-color: #c62828 !important; }
+    #eliminar:hover { background-color: #b71c1c !important; }
+}
+
 
 /* === FORMULARIOS (PÁGINAS DE CÁLCULO) === */
 section {
