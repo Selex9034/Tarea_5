@@ -1,62 +1,73 @@
 /* === ESTILOS GLOBALES === */
 :root {
-  --color-primario: #3949ab;
-  --color-primario-hover: #283593;
-  --color-fondo: #f7f9fc;
-  --color-superficie: #ffffff;
-  --color-texto: #222;
-  --color-encabezado: #1a237e;
-  --color-error: #d32f2f;
-  --color-borde: #ddd;
+  /* --- COLORES GLOBALES - TEMA OSCURO --- */
+  --color-primario: #8c9eff; 
+  --color-primario-hover: #536dfe; 
+  --color-fondo: #1a1a1a; 
+  --color-superficie: #2d2d2d; 
+  --color-texto: #e0e0e0; 
+  --color-encabezado: #ffffff; 
+  --color-error: #ef5350; 
+  --color-borde: #444444; 
   --radio-borde: 8px;
-  --sombra-caja: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --sombra-caja: 0 4px 12px rgba(0, 0, 0, 0.3); 
 
-  /* --- NUEVAS VARIABLES DE COLOR PARA TARJETAS --- */
-  --color-card-anova: #6698CC;    /* Fondo muy claro azul */
-  --color-card-chi: #b4b534;      /* Fondo muy claro verde */
-  --color-card-pca: #F08C21;      /* Fondo muy claro naranja */
-  --color-card-pearson: #E36888;  /* Fondo muy claro rojo */
+  /* --- COLORES PARA TARJETAS DE INICIO (Mantienen su color distintivo) --- */
+  --color-card-anova: #6698CC;    
+  --color-card-chi: #b4b534;      
+  --color-card-pca: #F08C21;      
+  --color-card-pearson: #E36888;  
 
-  --borde-anova: #bbdefb;
-  --borde-chi: #c8e6c9;
-  --borde-pca: #ffecb3;
-  --borde-pearson: #ffcdd2;
+  /* --- BORDES DE TARJETAS (Ajustados para tema oscuro) --- */
+  --borde-anova: #4a6787; 
+  --borde-chi: #7a7b21;
+  --borde-pca: #a66217;
+  --borde-pearson: #a64761;
 
-  --titulo-anova: #faf0ca;      
-  --titulo-chi: #faf0ca;        
-  --titulo-pca: #faf0ca;        
-  --titulo-pearson: #faf0ca;
+  /* --- TÍTULOS DE TARJETAS (Blancos para buen contraste con el fondo colorido de la tarjeta) --- */
+  --titulo-anova: #ffffff;      
+  --titulo-chi: #ffffff;        
+  --titulo-pca: #ffffff;        
+  --titulo-pearson: #ffffff;
 
-  /* Variables específicas de ANOVA para el tema */
-  --anova-main: #6698CC;         /* Tu color base */
-  --anova-dark: #376E9F;         /* Tono oscuro para hover/botones fuertes */
-  --anova-text: #173650;         /* Tono muy oscuro para encabezados */
-  --anova-light: #d1e2fc;
+  /* Variables específicas de ANOVA (Azul) */
+  --anova-main: #6698CC;         /* Fondo de la SECCIÓN ANOVA */
+  --anova-dark: #376E9F;         /* Azul oscuro: Fondo de BOTÓN ANOVA */
+  --anova-darker: #255886;       /* Azul más oscuro: Hover de BOTÓN ANOVA */
+  --anova-text: #ffffff;         /* Texto blanco */
+  --anova-light: #2d2d2d;        /* Fondo de la página */
+  --anova-table-header: #3a3a3a; 
 
   /* Variables específicas de CHI-CUADRADO (Verde/Lima) */
-  --chi-main: #b4b534;           /* Color base */
-  --chi-dark: #8c8d23;           /* Tono oscuro para hover/botones fuertes */
-  --chi-text: #4d4e13;           /* Tono muy oscuro para encabezados */
-  --chi-light: #f9ffc3;          /* Tono muy claro para fondos */
+  --chi-main: #b4b534;           /* Fondo de la SECCIÓN CHI-CUADRADO */
+  --chi-dark: #8c8d23;           /* Verde oscuro: Fondo de BOTÓN CHI */
+  --chi-darker: #6a6b1c;         /* Verde más oscuro: Hover de BOTÓN CHI */
+  --chi-text: #ffffff;           
+  --chi-light: #2d2d2d;          
+  --chi-table-header: #3a3a3a;
 
   /* Variables específicas de PCA (Naranja) */
-  --pca-main: #F08C21;           /* Color base */
-  --pca-dark: #C9721C;           /* Tono oscuro para hover/botones fuertes */
-  --pca-text: #7A4610;           /* Tono muy oscuro para encabezados */
-  --pca-light: #ffd79c;          /* Tono muy claro para fondos */
+  --pca-main: #F08C21;           /* Fondo de la SECCIÓN PCA */
+  --pca-dark: #C9721C;           /* Naranja oscuro: Fondo de BOTÓN PCA */
+  --pca-darker: #a15b13;         /* Naranja más oscuro: Hover de BOTÓN PCA */
+  --pca-text: #ffffff;           
+  --pca-light: #2d2d2d;          
+  --pca-table-header: #3a3a3a;
 
   /* Variables específicas de PEARSON (Rosa) */
-  --pearson-main: #E36888;       /* Color base */
-  --pearson-dark: #C95674;       /* Tono oscuro para hover/botones fuertes */
-  --pearson-text: #8C2C45;       /* Tono muy oscuro para encabezados */
-  --pearson-light: #fcc5d0;      /* Tono muy claro para fondos */
+  --pearson-main: #E36888;       /* Fondo de la SECCIÓN PEARSON */
+  --pearson-dark: #C95674;       /* Rosa oscuro: Fondo de BOTÓN PEARSON */
+  --pearson-darker: #a0445d;     /* Rosa más oscuro: Hover de BOTÓN PEARSON */
+  --pearson-text: #ffffff;       
+  --pearson-light: #2d2d2d;      
+  --pearson-table-header: #3a3a3a;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   margin: 0;
-  background: var(--color-fondo);
-  color: var(--color-texto);
+  background: var(--color-fondo); 
+  color: var(--color-texto); 
   line-height: 1.6;
 }
 
@@ -67,12 +78,12 @@ body {
 }
 
 h1, h2, h3 {
-  color: var(--color-encabezado);
+  color: var(--color-encabezado); 
   line-height: 1.2;
 }
 
 a {
-  color: var(--color-primario);
+  color: var(--color-primario); 
   text-decoration: none;
 }
 a:hover {
@@ -81,26 +92,26 @@ a:hover {
 
 /* === ENCABEZADO Y PIE DE PÁGINA === */
 header {
-  background: var(--color-superficie);
+  background: var(--color-superficie); 
   padding: 20px 0;
-  border-bottom: 1px solid var(--color-borde);
+  border-bottom: 1px solid var(--color-borde); 
   text-align: center;
-  box-shadow: var(--sombra-caja);
+  box-shadow: var(--sombra-caja); 
 }
 header h1 {
   margin: 0;
   font-size: 2rem;
 }
 header h1 a {
-  color: var(--color-encabezado);
+  color: var(--color-encabezado); 
   text-decoration: none;
 }
 header h1 a:hover {
-  color: var(--color-primario);
+  color: var(--color-primario); 
 }
 header .subtitulo {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--color-texto); 
   margin: 0;
 }
 
@@ -108,8 +119,8 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  color: #777;
-  border-top: 1px solid #eee;
+  color: var(--color-texto); 
+  border-top: 1px solid var(--color-borde); 
 }
 
 /* === TARJETAS (PÁGINA PRINCIPAL) === */
@@ -117,31 +128,32 @@ footer {
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 30px;
+  color: var(--color-texto); 
 }
 .cards {
-  display: flex;         /* <-- Cambiado de 'grid' a 'flex' */
-  flex-wrap: wrap;       /* <-- Añadido para que las tarjetas bajen de fila */
-  justify-content: center; /* <-- Añadido (¡Esta es la magia! Centra la última fila) */
+  display: flex;          
+  flex-wrap: wrap;        
+  justify-content: center; 
   gap: 20px;
 }
 .card {
-  /* Eliminamos el background, el borde y el box-shadow de aquí para definirlos por tarjeta */
-  background: var(--color-superficie); /* Base blanca, lo vamos a sobrescribir */
-  border: 1px solid var(--color-borde); /* Borde gris, lo vamos a sobrescribir */
+  background: var(--color-superficie); 
+  border: 1px solid var(--color-borde); 
   border-radius: var(--radio-borde);
   padding: 20px;
   box-shadow: var(--sombra-caja);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Transición para el color */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; 
   flex-basis: 300px;
   flex-grow: 0;
 }
 
+/* --- ESTILOS ESPECÍFICOS DE CADA TARJETA --- */
 .card-anova {
   background-color: var(--color-card-anova);
   border: 1px solid var(--borde-anova);
 }
 .card-anova h2 {
-  color: var(--titulo-anova);
+  color: var(--titulo-anova); 
 }
 
 .card-chi {
@@ -149,7 +161,7 @@ footer {
   border: 1px solid var(--borde-chi);
 }
 .card-chi h2 {
-  color: var(--titulo-chi);
+  color: var(--titulo-chi); 
 }
 
 .card-pca {
@@ -167,158 +179,293 @@ footer {
 .card-pearson h2 {
   color: var(--titulo-pearson); 
 }
-
+/* --- FIN ESTILOS ESPECÍFICOS --- */
 
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
   text-decoration: none;
 }
 .card h2 {
   margin-top: 0;
 }
 .card p {
-  color: #444;
+  color: var(--color-texto); 
 }
 
-/* === TEMA PARA PÁGINA ANOVA === */
+/* ----------------------------------------------------------------------------------- */
+/* === TEMAS MONOCROMÁTICOS POR PÁGINA (Añadir clase 'theme-XXXX' al <body>) === */
+/* ----------------------------------------------------------------------------------- */
 
+/* === TEMA MONOCROMÁTICO PARA ANOVA (Azul) - Tema Oscuro === */
 body.theme-anova {
-    background: var(--anova-light);
-  
-    /* 1. Encabezados y enlaces primarios */
-    h1, h2, h3 {
-        color: var(--anova-text); /* Azul muy oscuro para títulos */
-    }
-    a {
-        color: var(--anova-dark); /* Enlaces en tono oscuro de azul */
-    }
-    a:hover {
-        color: var(--anova-main);
-    }
+    background: var(--anova-light); /* Fondo de la página (gris oscuro) */
+    
+    h1, h2, h3 { color: var(--anova-text); } 
+    a { color: var(--anova-dark); } /* Enlaces usan color oscuro del tema */
+    a:hover { color: var(--anova-main); } 
 
-    /* 2. Botones de acción (el botón de Calcular) */
-    button {
-        background: var(--anova-main);
-        transition: background-color 0.2s ease;
-    }
-    button:hover {
-        background: var(--anova-dark);
+    /* BOTONES usan la paleta del tema (dark/darker) */
+    button { 
+        background: var(--anova-dark); 
+        color: var(--anova-text); 
+    } 
+    button:hover { 
+        background: var(--anova-darker); 
     }
     
-    /* 3. Títulos principales del header */
-    header h1 a {
-        color: var(--anova-text);
-    }
-    header h1 a:hover {
-        color: var(--anova-main);
-    }
+    header h1 a { color: var(--anova-text); }
+    header h1 a:hover { color: var(--anova-dark); }
 
-    /* 4. Tablas (resultados) */
-    thead th {
-        background-color: var(--anova-light); /* Fondo muy claro para encabezados de tabla */
-        color: var(--anova-text);            /* Texto muy oscuro */
+    thead th { 
+      background-color: var(--anova-table-header); 
+      color: var(--anova-text); 
+      border-color: var(--color-borde); 
     }
-    tbody tr:hover {
-        background-color: var(--anova-light);
+    tbody tr {
+      background-color: var(--color-superficie); 
+      color: var(--color-texto); 
+      border-color: var(--color-borde);
     }
-
+    tbody tr:nth-child(even) {
+      background-color: #3a3a3a; 
+    }
+    tbody tr:hover { background-color: var(--anova-dark); } 
+    td { border-color: var(--color-borde); } 
+    
     section {
-        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
-        border: 1px solid var(--borde-anova); /* Borde azul claro */
+        background: var(--anova-main); /* FONDO DE SECCIÓN CON COLOR DE TEMA (tono medio) */
+        border: 1px solid var(--anova-dark); 
+        box-shadow: var(--sombra-caja);
     }
+    section h2 { color: var(--anova-text); } 
+    section p { color: var(--color-texto); } 
+    section label { color: var(--color-texto); } 
 
-    /* 5. Botón de 'Eliminar' (ajuste el rojo a un rojo de verdad, no monocromático) */
-    #eliminar {
-        background-color: #c62828 !important; /* Mantenemos el color de error rojo para la acción de eliminar */
+    
+    /* --------------------------------------------------- */
+    /* *** CORRECCIÓN CLAVE DE INPUTS (ANOVA) *** */
+    /* Se hace más específica incluyendo input[type="text"] y la regla general */
+    /* --------------------------------------------------- */
+    textarea, 
+    input[type="number"], 
+    input[type="text"], /* <-- AGREGADO */
+    #contenedor-tabla input[type="number"],
+    /* REGLA GENÉRICA DENTRO DEL TEMA */
+    textarea, input[type="number"] { 
+        background-color: #222222 !important; 
+        color: var(--color-texto) !important; 
+        border-color: var(--color-borde) !important; 
     }
-    #eliminar:hover {
-        background-color: #b71c1c !important; 
-    }
+    /* --------------------------------------------------- */
+
+
+    #eliminar { background-color: #c62828 !important; }
+    #eliminar:hover { background-color: #b71c1c !important; }
 }
 
-/* === TEMA MONOCROMÁTICO PARA CHI-CUADRADO (Verde/Lima) === */
+/* === TEMA MONOCROMÁTICO PARA CHI-CUADRADO (Verde/Lima) - Tema Oscuro === */
 body.theme-chi {
-    background: var(--chi-light); /* Fondo verde muy claro para toda la página */
+    background: var(--chi-light); 
     
     h1, h2, h3 { color: var(--chi-text); }
     a { color: var(--chi-dark); }
     a:hover { color: var(--chi-main); }
 
-    button { background: var(--chi-main); }
-    button:hover { background: var(--chi-dark); }
+    /* BOTONES usan la paleta del tema (dark/darker) */
+    button { 
+        background: var(--chi-dark); 
+        color: var(--chi-text); 
+    }
+    button:hover { 
+        background: var(--chi-darker); 
+    }
     
     header h1 a { color: var(--chi-text); }
-    header h1 a:hover { color: var(--chi-main); }
+    header h1 a:hover { color: var(--chi-dark); }
 
-    thead th { background-color: var(--chi-light); color: var(--chi-text); }
-    tbody tr:hover { background-color: var(--chi-light); }
+    thead th { 
+      background-color: var(--chi-table-header); 
+      color: var(--chi-text); 
+      border-color: var(--color-borde);
+    }
+    tbody tr {
+      background-color: var(--color-superficie); 
+      color: var(--color-texto); 
+      border-color: var(--color-borde);
+    }
+    tbody tr:nth-child(even) {
+      background-color: #3a3a3a; 
+    }
+    tbody tr:hover { background-color: var(--chi-dark); }
+    td { border-color: var(--color-borde); }
     
     section {
-        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
-        border: 1px solid var(--borde-chi); /* Borde verde claro */
+        background: var(--chi-main); 
+        border: 1px solid var(--chi-dark); 
+        box-shadow: var(--sombra-caja);
     }
+    section h2 { color: var(--chi-text); }
+    section p { color: var(--color-texto); }
+    section label { color: var(--color-texto); }
+
+    .form-group label { color: var(--color-texto); }
+    
+    /* --------------------------------------------------- */
+    /* *** CORRECCIÓN CLAVE DE INPUTS (CHI-CUADRADO) *** */
+    /* --------------------------------------------------- */
+    textarea, 
+    input[type="number"], 
+    #contenedor-tabla input[type="number"],
+    textarea, input[type="number"] { 
+        background-color: #222222 !important;
+        color: var(--color-texto) !important;
+        border-color: var(--color-borde) !important;
+    }
+    /* --------------------------------------------------- */
+
 
     #eliminar { background-color: #c62828 !important; }
     #eliminar:hover { background-color: #b71c1c !important; }
 }
 
-/* === TEMA MONOCROMÁTICO PARA PCA (Naranja) === */
+/* === TEMA MONOCROMÁTICO PARA PCA (Naranja) - Tema Oscuro === */
 body.theme-pca {
-    background: var(--pca-light); /* Fondo naranja muy claro para toda la página */
+    background: var(--pca-light); 
     
     h1, h2, h3 { color: var(--pca-text); }
     a { color: var(--pca-dark); }
     a:hover { color: var(--pca-main); }
 
-    button { background: var(--pca-main); }
-    button:hover { background: var(--pca-dark); }
+    /* BOTONES usan la paleta del tema (dark/darker) */
+    button { 
+        background: var(--pca-dark); 
+        color: var(--pca-text); 
+    }
+    button:hover { 
+        background: var(--pca-darker); 
+    }
     
     header h1 a { color: var(--pca-text); }
-    header h1 a:hover { color: var(--pca-main); }
+    header h1 a:hover { color: var(--pca-dark); }
 
-    thead th { background-color: var(--pca-light); color: var(--pca-text); }
-    tbody tr:hover { background-color: var(--pca-light); }
+    thead th { 
+      background-color: var(--pca-table-header); 
+      color: var(--pca-text); 
+      border-color: var(--color-borde);
+    }
+    tbody tr {
+      background-color: var(--color-superficie); 
+      color: var(--color-texto); 
+      border-color: var(--color-borde);
+    }
+    tbody tr:nth-child(even) {
+      background-color: #3a3a3a; 
+    }
+    tbody tr:hover { background-color: var(--pca-dark); }
+    td { border-color: var(--color-borde); }
     
     section {
-        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
-        border: 1px solid var(--borde-pca); /* Borde naranja claro */
+        background: var(--pca-main); 
+        border: 1px solid var(--pca-dark); 
+        box-shadow: var(--sombra-caja);
     }
+    section h2 { color: var(--pca-text); }
+    section p { color: var(--color-texto); }
+    section label { color: var(--color-texto); }
+
+    .form-group label { color: var(--color-texto); }
+    
+    /* --------------------------------------------------- */
+    /* *** CORRECCIÓN CLAVE DE INPUTS (PCA) *** */
+    /* --------------------------------------------------- */
+    textarea, 
+    input[type="number"], 
+    #contenedor-tabla input[type="number"],
+    textarea, input[type="number"] { 
+        background-color: #222222 !important;
+        color: var(--color-texto) !important;
+        border-color: var(--color-borde) !important;
+    }
+    /* --------------------------------------------------- */
+
 
     #eliminar { background-color: #c62828 !important; }
     #eliminar:hover { background-color: #b71c1c !important; }
 }
 
-/* === TEMA MONOCROMÁTICO PARA PEARSON (Rosa) === */
+/* === TEMA MONOCROMÁTICO PARA PEARSON (Rosa) - Tema Oscuro === */
 body.theme-pearson {
-    background: var(--pearson-light); /* Fondo rosa muy claro para toda la página */
+    background: var(--pearson-light); 
     
     h1, h2, h3 { color: var(--pearson-text); }
     a { color: var(--pearson-dark); }
     a:hover { color: var(--pearson-main); }
 
-    button { background: var(--pearson-main); }
-    button:hover { background: var(--pearson-dark); }
+    /* BOTONES usan la paleta del tema (dark/darker) */
+    button { 
+        background: var(--pearson-dark); 
+        color: var(--pearson-text); 
+    }
+    button:hover { 
+        background: var(--pearson-darker); 
+    }
     
     header h1 a { color: var(--pearson-text); }
-    header h1 a:hover { color: var(--pearson-main); }
+    header h1 a:hover { color: var(--pearson-dark); }
 
-    thead th { background-color: var(--pearson-light); color: var(--pearson-text); }
-    tbody tr:hover { background-color: var(--pearson-light); }
+    thead th { 
+      background-color: var(--pearson-table-header); 
+      color: var(--pearson-text); 
+      border-color: var(--color-borde);
+    }
+    tbody tr {
+      background-color: var(--color-superficie); 
+      color: var(--color-texto); 
+      border-color: var(--color-borde);
+    }
+    tbody tr:nth-child(even) {
+      background-color: #3a3a3a; 
+    }
+    tbody tr:hover { background-color: var(--pearson-dark); }
+    td { border-color: var(--color-borde); }
     
     section {
-        background: var(--color-superficie); /* Usamos blanco puro para las tarjetas de contenido */
-        border: 1px solid var(--borde-pearson); /* Borde rosa claro */
+        background: var(--pearson-main); 
+        border: 1px solid var(--pearson-dark); 
+        box-shadow: var(--sombra-caja);
     }
+    section h2 { color: var(--pearson-text); }
+    section p { color: var(--color-texto); }
+    section label { color: var(--color-texto); }
+
+    .form-group label { color: var(--color-texto); }
+
+    /* --------------------------------------------------- */
+    /* *** CORRECCIÓN CLAVE DE INPUTS (PEARSON) *** */
+    /* --------------------------------------------------- */
+    textarea, 
+    input[type="number"], 
+    #contenedor-tabla input[type="number"],
+    textarea, input[type="number"] { 
+        background-color: #222222 !important;
+        color: var(--color-texto) !important;
+        border-color: var(--color-borde) !important;
+    }
+    /* --------------------------------------------------- */
+
 
     #eliminar { background-color: #c62828 !important; }
     #eliminar:hover { background-color: #b71c1c !important; }
 }
 
+/* ----------------------------------------------------------------------------------- */
+
 
 /* === FORMULARIOS (PÁGINAS DE CÁLCULO) === */
-section {
+/* Estas reglas son un fallback o para elementos que no están dentro de un `section` */
+section { 
   background: var(--color-superficie);
   border: 1px solid var(--color-borde);
   border-radius: var(--radio-borde);
@@ -334,6 +481,7 @@ section {
   display: block;
   font-weight: bold;
   margin-bottom: 8px;
+  color: var(--color-texto); 
 }
 
 textarea,
@@ -344,14 +492,16 @@ input[type="number"] {
   font-size: 1rem;
   border: 1px solid var(--color-borde);
   border-radius: 5px;
-  box-sizing: border-box; /* Asegura que padding no afecte el width */
+  box-sizing: border-box; 
+  background-color: #222222; /* Fondo por defecto */
+  color: var(--color-texto); /* Texto por defecto */
 }
 textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-button {
+button { /* Estos son los estilos de botón genéricos si no tienen un tema aplicado */
   background: var(--color-primario);
   color: white;
   padding: 12px 20px;
@@ -367,25 +517,26 @@ button:hover {
   background: var(--color-primario-hover);
 }
 button:disabled {
-  background: #999;
+  background: #555; 
   cursor: not-allowed;
+  color: #aaaaaa; 
 }
 
 /* === MENSAJE DE ERROR === */
 .error-message {
   padding: 15px;
   margin-bottom: 20px;
-  background: #fff0f0;
+  background: #3d1c1c; 
   border: 1px solid var(--color-error);
-  color: var(--color-error);
+  color: var(--color-error); 
   border-radius: 5px;
   font-weight: bold;
 }
 
 /* === RESULTADOS (TABLAS, PRE, GRÁFICOS) === */
 #resultados pre {
-  background: #2d2d2d;
-  color: #f1f1f1;
+  background: #111111; 
+  color: #00ff00; 
   padding: 20px;
   border-radius: 5px;
   overflow-x: auto;
@@ -399,24 +550,28 @@ table {
   font-size: 0.95rem;
   width: 100%;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
   border-radius: var(--radio-borde);
-  overflow: hidden; /* Para que el radius afecte a las esquinas */
+  overflow: hidden; 
 }
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-borde); 
   padding: 10px 12px;
 }
-thead th {
-  background-color: #e3f2fd;
+thead th { 
+  background-color: #333333; 
   font-weight: bold;
-  color: #1a237e;
+  color: var(--color-encabezado); 
 }
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+tbody tr:nth-child(even) { 
+  background-color: #2a2a2a; 
 }
-tbody tr:hover {
-  background-color: #f1f8ff;
+tbody tr { 
+  background-color: var(--color-superficie); 
+  color: var(--color-texto); 
+}
+tbody tr:hover { 
+  background-color: #4a4a4a; 
 }
 
 /* Inputs dentro de tablas (Chi-cuadrado) */
@@ -429,11 +584,11 @@ tbody tr:hover {
 canvas {
   display: block;
   margin: 20px auto;
-  width: 100% !important;   /* Ancho adaptable */
+  width: 100% !important;   
   max-width: 900px;
-  height: 420px !important;  /* Alto fijo */
-  border: 1px solid var(--color-borde);
-  background: var(--color-superficie);
+  height: 420px !important;  
+  border: 1px solid var(--color-borde); 
+  background: var(--color-superficie); 
   box-shadow: var(--sombra-caja);
   border-radius: var(--radio-borde);
 }
@@ -443,26 +598,27 @@ canvas {
   display: inline-block;
   margin-top: 20px;
   font-weight: bold;
+  color: var(--color-primario); 
 }
 
 /* === AJUSTE PARA BOTONES DE ANOVA === */
 
 /* 1. Crea el contenedor Flexbox */
 #control-grupos .button-group {
-  display: flex;  /* Activa Flexbox */
-  gap: 15px;      /* Espacio limpio entre los botones (en lugar de margin-left) */
+  display: flex;  
+  gap: 15px;      
 }
 
 /* 2. Hace que los botones sean "parejos" */
 #control-grupos .button-group button {
-  flex: 1;      /* Cada botón toma 1 parte igual de espacio */
-  width: auto;  /* Sobrescribe el width: 100% general */
+  flex: 1;      
+  width: auto;  
 }
 
 /* 3. Mueve el estilo del botón rojo al CSS */
-#eliminar {
-  background-color: #c62828; /* El color rojo que tenías */
+#eliminar { 
+  background-color: #c62828; 
 }
 #eliminar:hover {
-  background-color: #b71c1c; /* Un rojo un poco más oscuro al pasar el mouse */
+  background-color: #b71c1c; 
 }
